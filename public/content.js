@@ -8,7 +8,7 @@ document.addEventListener('mouseup', function() {
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.action === "translate_word" && selectedText) {
         let context = getContext(selectedText);
-        console.log("message send");
+        console.log("message send!");
         chrome.runtime.sendMessage({word: selectedText, text: context});
     }
 });
